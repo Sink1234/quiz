@@ -4,12 +4,13 @@ export default function Answer(props) {
   return (
     <li>
       <button
-        className="p-1 sm:p-0 flex items-center gap-2 hover:text-green"
+        className="p-1 sm:p-0 flex items-center text-start gap-2 hover:text-green"
         onClick={() => answerQuestion(answerValue, answerText)}
       >
-        <span>{icon}</span>
+        <span className="mr-2">{icon}</span>
         {`${answerValue}. ${answerText}`}
       </button>
     </li>
   );
 }
+
