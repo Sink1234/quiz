@@ -16,7 +16,7 @@ export default function Index() {
       <div className="relative min-h-screen flex flex-col">
         <Image
           src={black}
-          className=" z-[-1] absolute top-0 left-0 w-full z-10"
+          className=" z-[-1] absolute sm:min-h-[570px] object-cover top-0 left-0 w-full z-10"
           alt=""
         />
         <Image
@@ -26,7 +26,7 @@ export default function Index() {
         />
         <Image
           src={black}
-          className="  z-[-1] absolute bottom-0 rotate-180 left-0 w-full h-auto z-10"
+          className="  z-[-1] absolute bottom-0 sm:min-h-[570px] object-cover rotate-180 left-0 w-full  z-10"
           alt=""
         />
         <header>
@@ -46,10 +46,10 @@ export default function Index() {
           </nav>
         </header>
 
-        <div className="text-white flex items-center justify-center  my-[7rem] px-10 ">
+        <div className="text-white flex items-center justify-center  my-[7rem] sm:my-[3rem] px-10 ">
           <Image src={elipse} className="absolute object-cover z-[-1]" alt="" />
           <div className="flex flex-col items-center  justify-center space-y-5">
-            <h1 className=" text-[34px] uppercase !m-0 text-center">
+            <h1 className=" text-[34px] sm:text-[25px] uppercase !m-0 text-center">
               Строительство фундамента <br />в Санкт-Петербурге и Области
             </h1>
             <div className="text-center">
@@ -79,3 +79,4 @@ export default function Index() {
     </>
   );
 }
+
