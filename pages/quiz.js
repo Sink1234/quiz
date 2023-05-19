@@ -158,12 +158,7 @@ export default function Home({ exercises }) {
         <meta name="description" content="Quiz app in next js" />
       </Head>
       <div>
-        <main className="static block w-full flex items-center justify-center py-20 px-10">
-          <Image
-            className="absolute bottom-0 left-0 object-contain max-w-[50%] max-h-[50%]"
-            src={polygon}
-            alt=""
-          />
+        <main className="static block w-full flex flex-col items-center justify-center pt-20 px-10 ">
           <div className="z-10">
             {submitted ? (
               <div className="py-[20%] px-[10%]">
@@ -195,7 +190,7 @@ export default function Home({ exercises }) {
                   <div className="flex flex-col">
                     <label htmlFor="message">Телефон</label>
                     <input
-                      type='tel'
+                      type="tel"
                       className="rounded-md bg-white p-2 border border-gray"
                       onChange={(e) => {
                         setMessage(e.target.value);
@@ -236,11 +231,17 @@ export default function Home({ exercises }) {
           </div>
           <Image
             src={polygon}
-            className="absolute top-0 right-0 object-contain rotate-180  max-w-[50%] max-h-[50%]"
+            className="absolute top-0 right-0 z-[-1] object-contain rotate-180  max-w-[50%] max-h-[50%]"
             alt=""
           />
         </main>
+        <Image
+          className="mt-auto  object-contain max-w-[50%] max-h-[50%]"
+          src={polygon}
+          alt=""
+        />
       </div>
     </>
   );
 }
+
