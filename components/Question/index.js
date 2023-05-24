@@ -69,7 +69,7 @@ export default function Question({
   };
 
   const percents =
-    ((state.currentQuestion + 1) / state.numberOfQuestions) * 100;
+    Math.floor(((state.currentQuestion + 1) / 5) * 100)
   return (
     <div className="w-full flex flex-col grow max-w-[600px] mx-auto">
       <h5
@@ -80,7 +80,7 @@ export default function Question({
         шаг {`${state.currentQuestion + 2}`}/6
       </h5>
       <button
-        className="flex items-center gap-1 bg-gray-400 p-2 px-4 my-2 w-fit rounded-sm shadow-md text-white"
+        className="flex items-center gap-1 bg-black border boder-[c7c7c7] text-[#c7c7c7] p-2 px-4 my-2 w-fit rounded-sm shadow-md text-white"
         onClick={hideExercise}
       >
         <span>
