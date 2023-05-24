@@ -12,18 +12,18 @@ import cls from 'classnames'
 export function getServerSideProps() {
   const exercises = [
     { id: 2, title: "Дом из газобетона", imageUrl: "/beton.jpg" },
-    { id: 1, title: "Кирпичный дом", imageUrl: "/../public/kirpich.jpg" },
-    { id: 1, title: "Деревянный дом", imageUrl: "/../public/wood.jpg" },
-    { id: 1, title: "Мелкое строение", imageUrl: "/../public/small.jpg" },
+    { id: 1, title: "Кирпичный дом", imageUrl: "/kirpich.jpg" },
+    { id: 1, title: "Деревянный дом", imageUrl: "/wood.jpg" },
+    { id: 1, title: "Мелкое строение", imageUrl: "/small.jpg" },
     // { id: 0, title: "Каркасный дом" },
     // { id: 3, title: "Дом из бруса" },
     // { id: 4, title: "Баня" },
     {
       id: 5,
       title: "Коммерческая недвижимость",
-      imageUrl: "/../public/commerce.jpg",
+      imageUrl: "/commerce.jpg",
     },
-    { id: 5, title: "Другое", imageUrl: "/../public/other.jpg" },
+    { id: 5, title: "Другое", imageUrl: "/other.jpg" },
     // { id: 6, title: "Другое" },
   ];
 
@@ -179,7 +179,6 @@ export default function Home({ exercises }) {
         '!items-start !justify-start ': isMobile
       })}>
         <>
-    test test test
           {submitted ? (
             <div className="py-[20%] px-[10%]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -198,7 +197,7 @@ export default function Home({ exercises }) {
             />
           ) : isExerciseDone ? (
             <div>
-              <form className="flex flex-col  space-y-10 py-[20%]">
+              <form className="flex flex-col  mx-auto  space-y-10 py-[20%]">
                 <div className="flex flex-col">
                   <label htmlFor="name">
                     Площать пильного фундамента в кв/м
