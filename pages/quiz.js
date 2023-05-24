@@ -100,7 +100,7 @@ export default function Home({ exercises }) {
   const [submitted, setSubmitted] = useState(false);
   const [allAnswers, setAllAnswers] = useState([]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Sending");
 
@@ -111,7 +111,7 @@ export default function Home({ exercises }) {
       allAnswers,
     };
 
-    fetch("/api/contact", {
+    await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
