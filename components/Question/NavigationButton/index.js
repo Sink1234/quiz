@@ -16,11 +16,7 @@ export default function NavigationButton({ state, moveQuestion }) {
           onClick={() => moveQuestion("next")}
           className={!answers[currentQuestion] ? x : y}
         >
-          {currentQuestion !== numberOfQuestions - 1 ? (
             <Image src={arrow} className="" alt="" />
-          ) : (
-            "Finish"
-          )}
         </button>
       );
     } else {
