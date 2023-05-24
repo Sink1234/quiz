@@ -23,7 +23,7 @@ export default function ExerciseList({ exercises, isMobile, func }) {
                 "!space-x-[10px] !max-w-[150px] !mr-0": isMobile,
               }
             )}
-            onClick={() => func(exercise.id)}
+            onClick={() => func(exercise.id, exercise.title )}
             key={exercise.id}
           >
             <Image
