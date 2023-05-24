@@ -34,25 +34,27 @@ export default async function (req, res) {
     html: Object.values(req.body.allAnswers).reduce(
       (acc, answer) =>
         acc + ` <div>${answer.question} <br/> ${answer.answer}</div> <br/> `,
-      [`<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p> <p> Площадь: ${res.body.square} кв. м </p>`]
+      [
+        `<div> ${req.body.message}</div>
+      <p>Sent from: ${req.body.email}</p> 
+      <p>Площадь:  ${req.body.name}</p> 
+      `
+      ]
     ),
   };
-await new Promise((resolve, reject) => {
-//       // send mail
-      transporter.sendMail(mailData, (err, info) => {
-          if (err) {
-              console.error(err);
-              reject(err);
-          } else {
-              console.log(info);
-              resolve(info);
-          }
-      });
+  await new Promise((resolve, reject) => {
+    //       // send mail
+    transporter.sendMail(mailData, (err, info) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+      } else {
+        console.log(info);
+        resolve(info);
+      }
+    });
   });
-  // transporter.sendMail(mailData, function (err, info) {
-  //   if (err) console.log(err);
-  //   else console.log(info);
-  // });
+
 
   console.log(req.body);
   console.log(mailData);
