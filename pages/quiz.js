@@ -179,6 +179,7 @@ export default function Home({ exercises }) {
         '!items-start !justify-start ': isMobile
       })}>
         <>
+    test test test
           {submitted ? (
             <div className="py-[20%] px-[10%]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
