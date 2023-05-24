@@ -110,6 +110,8 @@ export default function Home({ exercises }) {
       message,
       allAnswers,
     };
+    
+   setSubmitted(true);
 
     fetch("/api/contact", {
       method: "POST",
@@ -122,7 +124,6 @@ export default function Home({ exercises }) {
       console.log("Response received");
 //       if (res.status === 200) {
         console.log("Response succeeded!");
-        setSubmitted(true);
         setName("");
         setEmail("");
         setMessage("");
