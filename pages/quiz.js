@@ -196,52 +196,48 @@ export default function Home({ exercises }) {
               isMobile={isMobile}
             />
           ) : isExerciseDone ? (
-            <div>
-              <form className="flex flex-col  mx-auto  space-y-10 py-[20%]">
-                <div className="flex flex-col">
-                  <label htmlFor="name">
-                    Площать пильного фундамента в кв/м
-                  </label>
-                  <input
-                    className="rounded-md  text-black bg-white p-2 border border-gray"
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                    name="name"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="message">Телефон</label>
-                  <input
-                    type="tel"
-                    className="rounded-md text-black bg-white p-2 border border-gray"
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    name="message"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <label htmlFor="email">Почта</label>
-                  <input
-                    type="email"
-                    className="rounded-md text-black bg-white p-2 border border-gray"
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    name="email"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  onClick={(e) => {
-                    handleSubmit(e);
+             <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[20%]">
+              <div className="flex flex-col">
+                <label htmlFor="name">Площать пильного фундамента в кв/м</label>
+                <input
+                  className="rounded-md  text-black bg-white p-2 border border-gray"
+                  onChange={(e) => {
+                    setName(e.target.value);
                   }}
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
+                  name="name"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="message">Телефон</label>
+                <input
+                  type="tel"
+                  className="rounded-md text-black bg-white p-2 border border-gray"
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
+                  name="message"
+                />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email">Почта</label>
+                <input
+                  type="email"
+                  className="rounded-md text-black bg-white p-2 border border-gray"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
+                  name="email"
+                />
+              </div>
+              <button
+                type="submit"
+                onClick={(e) => {
+                  handleSubmit(e);
+                }}
+              >
+                Submit
+              </button>
+            </form>
           ) : (
             <Question
               questions={questions}
