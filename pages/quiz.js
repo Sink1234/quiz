@@ -11,7 +11,7 @@ import cls from 'classnames'
 
 export function getServerSideProps() {
   const exercises = [
-    { id: 2, title: "Дом из газобетона", imageUrl: "../public/beton.jpg" },
+    { id: 2, title: "Дом из газобетона", imageUrl: "/beton.jpg" },
     { id: 1, title: "Кирпичный дом", imageUrl: "/../public/kirpich.jpg" },
     { id: 1, title: "Деревянный дом", imageUrl: "/../public/wood.jpg" },
     { id: 1, title: "Мелкое строение", imageUrl: "/../public/small.jpg" },
