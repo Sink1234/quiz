@@ -29,12 +29,12 @@ export default async function (req, res) {
   const mailData = {
     from: "velobos.ik26@yandex.ru",
     to: "velobos.ik26@yandex.com",
-    subject: `Message From ${req.body.name}`,
+    subject: `Message From`,
     text: req.body.message + " | Sent from: " + req.body.email,
     html: Object.values(req.body.allAnswers).reduce(
       (acc, answer) =>
         acc + ` <div>${answer.question} <br/> ${answer.answer}</div> <br/> `,
-      [`<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`]
+      [`<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p> <p> Площадь: ${res.body.square} кв. м </p>`]
     ),
   };
 await new Promise((resolve, reject) => {
@@ -55,6 +55,7 @@ await new Promise((resolve, reject) => {
   // });
 
   console.log(req.body);
+  console.log(mailData);
   res.send("success");
   res.status(200).json({ status: "OK" });
 }
