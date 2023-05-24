@@ -39,10 +39,10 @@ export default function Question({
       ...state,
       answers,
     });
-
+    
     setAllAnswers({
       ...allAnswers,
-      [currentQuestion]: { question: question.question, answer: answerText },
+      [currentQuestion + 1]: { question: question.question, answer: answerText },
     });
   };
 
@@ -89,7 +89,7 @@ export default function Question({
         <span>К выбору строения</span>
       </button>
       <h1 className="text-md mt-2 text-[#6D6D6D] mb-10">{`${
-        state.currentQuestion + 1
+        state.currentQuestion + 2
       }. ${question.question}`}</h1>
       <Answers
         answers={question.answers}
