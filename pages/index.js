@@ -32,7 +32,7 @@ export default function Index() {
         <header>
           <nav className="">
             <div className="nav-left ">
-              <Link href="#" className="">Фундаментвспб.рф</Link>
+              <Link href="#" className="mr-5">Фундаментвспб.рф</Link>
               <div className="line"></div>
               <p className="sm:hidden">
                 Строительство фундаментов <br />в Санкт-Петербурге и
@@ -61,9 +61,9 @@ export default function Index() {
             </Link>
           </div>
         </div>
-        <footer className="mt-auto text-white flex max-w-[1300px] mx-auto p-2">
+        <footer className="mt-auto text-white flex max-w-[1300px] gap-3 mx-auto p-2">
           <div className="nav-left">
-            <Link href="#" className="sm:hidden">Фундаментвспб.рф</Link>
+            <Link href="#" className="sm:hidden mr-5">Фундаментвспб.рф</Link>
             <div className="line"></div>
             <p className="sm:hidden">
               2009-2023 © Все права защищены. <br />
