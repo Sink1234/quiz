@@ -39,9 +39,6 @@ export default function ExerciseList({ exercises, isMobile, func }) {
             </div>
           </li>
         ))}
-        <button className="text-[#1B1B1B] bg-white rounded-full py-5 px-10 mt-7 font-bold" onClick={() => func(exercises[0].id)}>
-          Нужна консультация
-        </button>
       </ul>
     </div>
   );
