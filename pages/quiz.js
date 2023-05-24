@@ -100,7 +100,7 @@ export default function Home({ exercises }) {
   const [submitted, setSubmitted] = useState(false);
   const [allAnswers, setAllAnswers] = useState([]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Sending");
 
@@ -111,7 +111,7 @@ export default function Home({ exercises }) {
       allAnswers,
     };
 
-    await fetch("/api/contact", {
+    fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -120,13 +120,13 @@ export default function Home({ exercises }) {
       body: JSON.stringify(data),
     }).then((res) => {
       console.log("Response received");
-      if (res.status === 200) {
+//       if (res.status === 200) {
         console.log("Response succeeded!");
         setSubmitted(true);
         setName("");
         setEmail("");
         setMessage("");
-      }
+//       }
     });
   };
 
