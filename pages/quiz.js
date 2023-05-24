@@ -149,14 +149,19 @@ export default function Home({ exercises }) {
     }
   }, []);
 
-  const showExercise = (id) => {
+  const showExercise = (id, answer) => {
     setState({
       ...state,
       exerciseId: id,
       questions: getQuestions(0),
       isExerciseShown: true,
     });
+    setAllAnswers({
+      ...allAnswers,
+      0: { question: 'Тип строения', answer: answer },
+    });
   };
+  
   const hideExercise = () => {
     setState(initialState);
   };
@@ -198,13 +203,13 @@ export default function Home({ exercises }) {
           ) : isExerciseDone ? (
             <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[5%]">
               <div className="flex flex-col">
-                <label htmlFor="square">Площать пильного фундамента в кв/м</label>
+                <label htmlFor="name">Площать пильного фундамента в кв/м</label>
                 <input
                   className="rounded-md  text-black bg-white p-2 border border-gray"
                   onChange={(e) => {
-                    setSquare(e.target.value);
+                    setName(e.target.value);
                   }}
-                  name="square"
+                  name="name"
                 />
               </div>
               <div className="flex flex-col">
