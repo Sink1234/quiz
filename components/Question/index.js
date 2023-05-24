@@ -67,10 +67,7 @@ export default function Question({
       }
     }
   };
-  console.log(state);
-  console.log(((state.currentQuestion + 1) / state.numberOfQuestions) * 100);
-  console.log("state.currentQuestion+1: ", state.currentQuestion + 1);
-  console.log("state.numberOfQuestions: ", state.numberOfQuestions);
+
   const percents =
     ((state.currentQuestion + 1) / state.numberOfQuestions) * 100;
   return (
