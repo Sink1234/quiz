@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-anonymous-default-export
-export default function (req, res) {
+export default async function (req, res) {
   require("dotenv").config();
 
   let nodemailer = require("nodemailer");
@@ -11,9 +11,19 @@ export default function (req, res) {
     auth: {
       user: "velobos.ik26@yandex.ru",
       pass: "fvepvxrjabcuflqd",
-      // user: "a.egorovaaaaaa@yandex.ru",
-      // pass: "gqzbcvexwksxdkmk",
-    }
+    },
+  });
+
+  await new Promise((resolve, reject) => {
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log(error);
+        reject(error);
+      } else {
+        console.log("Server is ready to take our messages");
+        resolve(success);
+      }
+    });
   });
 
   const mailData = {
@@ -23,18 +33,28 @@ export default function (req, res) {
     text: req.body.message + " | Sent from: " + req.body.email,
     html: Object.values(req.body.allAnswers).reduce(
       (acc, answer) =>
-        acc +
-        ` <div>${answer.question} <br/> ${answer.answer}</div> <br/> `,
+        acc + ` <div>${answer.question} <br/> ${answer.answer}</div> <br/> `,
       [`<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`]
     ),
   };
-
-
-  transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
+await new Promise((resolve, reject) => {
+//       // send mail
+      transporter.sendMail(mailData, (err, info) => {
+          if (err) {
+              console.error(err);
+              reject(err);
+          } else {
+              console.log(info);
+              resolve(info);
+          }
+      });
   });
+  // transporter.sendMail(mailData, function (err, info) {
+  //   if (err) console.log(err);
+  //   else console.log(info);
+  // });
 
   console.log(req.body);
   res.send("success");
+  res.status(200).json({ status: "OK" });
 }
