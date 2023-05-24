@@ -11,15 +11,15 @@ import cls from 'classnames'
 
 export function getServerSideProps() {
   const exercises = [
-    { id: 2, title: "Дом из газобетона", imageUrl: "/beton.jpg" },
+    { id: 0, title: "Дом из газобетона", imageUrl: "/beton.jpg" },
     { id: 1, title: "Кирпичный дом", imageUrl: "/kirpich.jpg" },
-    { id: 1, title: "Деревянный дом", imageUrl: "/wood.jpg" },
-    { id: 1, title: "Мелкое строение", imageUrl: "/small.jpg" },
+    { id: 2, title: "Деревянный дом", imageUrl: "/wood.jpg" },
+    { id: 3, title: "Мелкое строение", imageUrl: "/small.jpg" },
     // { id: 0, title: "Каркасный дом" },
     // { id: 3, title: "Дом из бруса" },
     // { id: 4, title: "Баня" },
     {
-      id: 5,
+      id: 4,
       title: "Коммерческая недвижимость",
       imageUrl: "/commerce.jpg",
     },
@@ -168,20 +168,25 @@ export default function Home({ exercises }) {
     });
   };
 
-  return (
+    return (
     <>
       <Head>
         <title>Quiz</title>
         <meta name="description" content="Quiz app in next js" />
       </Head>
 
-      <main className={cls(" w-full flex bg-black text-white grow min-h-[100%] flex-col items-center justify-center pt-20 sm:pt-[40px] px-5 pb-20 ", {
-        '!items-start !justify-start ': isMobile
-      })}>
+      <main
+        className={cls(
+          " w-full flex bg-black text-white grow min-h-[100%] flex-col items-center justify-center pt-20 sm:pt-[40px] px-5 pb-20 ",
+          {
+            "!items-start !justify-start ": isMobile,
+          }
+        )}
+      >
         <>
           {submitted ? (
             <div className="py-[20%] px-[10%]">
-                 Мы уже приступили к просчету Вашего фундамента, скоро с Вами
+              Мы уже приступили к просчету Вашего фундамента, скоро с Вами
               свяжемся!
             </div>
           ) : !isExerciseShown ? (
@@ -191,15 +196,15 @@ export default function Home({ exercises }) {
               isMobile={isMobile}
             />
           ) : isExerciseDone ? (
-             <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[3%]">
+            <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[5%]">
               <div className="flex flex-col">
-                <label htmlFor="name">Площать пильного фундамента в кв/м</label>
+                <label htmlFor="square">Площать пильного фундамента в кв/м</label>
                 <input
                   className="rounded-md  text-black bg-white p-2 border border-gray"
                   onChange={(e) => {
-                    setName(e.target.value);
+                    setSquare(e.target.value);
                   }}
-                  name="name"
+                  name="square"
                 />
               </div>
               <div className="flex flex-col">
