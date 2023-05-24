@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import fundament from "../public/monolit-fundament1.jpg";
+// import fundament from "../public/monolit-fundament1.jpg";
+import fundament from "../public/фон.jpg";
 import Link from "next/link";
 import black from "../public/Rectangle 420.svg";
 import elipse from "../public/Ellipse 85.svg";
