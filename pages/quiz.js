@@ -196,7 +196,7 @@ export default function Home({ exercises }) {
               isMobile={isMobile}
             />
           ) : isExerciseDone ? (
-             <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[20%]">
+             <form className="flex flex-col max-w-[300px] w-full mx-auto  space-y-10 py-[3%]">
               <div className="flex flex-col">
                 <label htmlFor="name">Площать пильного фундамента в кв/м</label>
                 <input
