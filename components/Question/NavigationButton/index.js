@@ -36,7 +36,7 @@ export default function NavigationButton({ state, moveQuestion }) {
   };
   const { disabled: x, active: y } = buttonStyles;
   return (
-    <div className="flex justify-center gap-5 mt-5 mx-2">
+    <div className="flex justify-center gap-10 mt-5 mx-2">
       {getButton("prev")}
       {getButton("next")}
     </div>
