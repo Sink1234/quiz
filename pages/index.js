@@ -15,6 +15,7 @@ export default function Index() {
       </Head>
 
       <div className="relative min-h-screen flex flex-col">
+        <div className="full-v"></div>
         <Image
           src={black}
           className=" z-[-1] absolute sm:min-h-[570px] object-cover top-0 left-0 w-full z-10"
