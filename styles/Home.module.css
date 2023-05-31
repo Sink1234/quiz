@@ -99,8 +99,9 @@
     width: 100%;
     flex-direction: column;
   }
-  .my-[11rem]{
+  ..my-\[11rem\]{
     margim-top: 15rem; 
+    margim-bottom: 15rem;
   }
 }
 
