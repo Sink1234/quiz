@@ -242,5 +242,9 @@ main .mn-tx button {
   footer{
     padding: 2px
   }
+  .nav-right{
+     top: 3px;
+     position: relative;
+  }
 }
 
