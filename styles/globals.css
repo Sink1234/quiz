@@ -28,6 +28,14 @@ a {
   box-sizing: border-box;
 }
 
+.full-v{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #2b0a0a63;
+  z-index: -1; 
+}
+
 html {
   color-scheme: dark;
   width: 100%;
