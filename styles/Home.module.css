@@ -99,10 +99,6 @@
     width: 100%;
     flex-direction: column;
   }
-  .space-y-5{
-    margim-top: 15rem; 
-    margim-bottom: 15rem;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
