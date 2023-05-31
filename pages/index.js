@@ -68,7 +68,7 @@ export default function Index() {
             <Link href="#" className="sm:hidden mr-5">Фундаментвспб.рф</Link>
             <div className="line"></div>
             <p className="sm:hidden">
-              2009-2023 © Все права защищены. <br />
+              2009-2023 © Все права защищены.<br />
               ООО &apos;Про-бригадир строй&apos; ОГРН 1125030003489
             </p>
           </div>
