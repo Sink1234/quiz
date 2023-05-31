@@ -42,7 +42,7 @@ export default function Index() {
               </p>
             </div>
             <div className="nav-center sm:hidden">
-              г. Санкт-Петербург,09 Проезд Шокальского, д. 5
+              г. Санкт-Петербург, Проезд Шокальского, д. 5
             </div>
             <div className="nav-right">+7 (499) 350-10-79</div>
           </nav>
@@ -52,11 +52,11 @@ export default function Index() {
           <Image src={elipse} className="absolute object-cover z-[-1]" alt="" />
           <div className="flex flex-col items-center  justify-center space-y-5">
             <h1 className=" text-[34px] sm:text-[25px] uppercase !m-0 text-center">
-              Строительство фундамента <br />в Санкт-Петербурге и Области
+              Нужен надежный фундамент ?
             </h1>
             <div className="text-center">
-              Пройдите простой тест из 7 вопросов за 1 минуту <br />
-              рассчитайте стоимость укладки фундамента с материалом!
+              Пройдите простой тест из 7 вопросов за 1 минуту <br/>
+              Получив расчёт стоимости фундамента под ключ!
             </div>
             <Link href="/quiz" >
               <button className="bg-white text-green uppercase py-5 px-6 rounded-full">Рассчитать стоимость</button>
