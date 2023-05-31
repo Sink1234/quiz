@@ -235,4 +235,12 @@ main .mn-tx button {
   opacity: 0;
 }
 
+@media (max-width: 600px) {
+ nav{
+    padding: 15px
+  }
+  footer{
+    padding: 2px
+  }
+}
 
