@@ -45,11 +45,6 @@ body {
   height: 30vh;
   z-index: 1;
 }
-.min-h-screen{
-  background: #000;
-  opacity: 0.7;
-  z-index: 1;
-}
 .bc-bl-dn {
   position: absolute;
   width: 100vw;
