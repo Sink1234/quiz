@@ -73,7 +73,7 @@ export default function Index() {
             </p>
           </div>
           <div className="">
-            г. Санкт-Петербург, Проезд Шокальского, д. 5
+            г. Санкт-Петербург, Проезд Шокальского 5
           </div>
           <div className="nav-right ml-auto sm:hidden">+7 (499) 350-10-79</div>
         </footer>
