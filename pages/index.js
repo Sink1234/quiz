@@ -34,7 +34,7 @@ export default function Index() {
         <header>
           <nav className="">
             <div className="nav-left ">
-              <Link href="#" className="mr-5 sm:mr-2">Фундаментвспб.рф</Link>
+              <Link href="#" className="mr-5 sm:mr-3">Фундаментвспб.рф</Link>
               <div className="line"></div>
               <p className="sm:hidden">
                 Строительство фундаментов <br />в Санкт-Петербурге и
