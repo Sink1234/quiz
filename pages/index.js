@@ -48,7 +48,7 @@ export default function Index() {
           </nav>
         </header>
 
-        <div className="text-white flex items-center justify-center  my-[7rem] sm:my-[3rem] px-10 ">
+        <div className="text-white flex items-center justify-center  my-[9rem] sm:my-[3rem] px-10 ">
           <Image src={elipse} className="absolute object-cover z-[-1]" alt="" />
           <div className="flex flex-col items-center  justify-center space-y-5">
             <h1 className=" text-[34px] sm:text-[25px] uppercase !m-0 text-center">
