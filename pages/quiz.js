@@ -6,8 +6,7 @@ import ExerciseList from "../components/ExerciseList";
 import polygon from "../public/kirpich.jpg";
 import Image from "next/image";
 import { Input } from "postcss";
-import cls from 'classnames'
-
+import cls from "classnames";
 
 export function getServerSideProps() {
   const exercises = [
@@ -15,16 +14,12 @@ export function getServerSideProps() {
     { id: 1, title: "Кирпичный дом", imageUrl: "/kirpich.jpg" },
     { id: 2, title: "Деревянный дом", imageUrl: "/wood.jpg" },
     { id: 3, title: "Мелкое строение", imageUrl: "/small.jpg" },
-    // { id: 0, title: "Каркасный дом" },
-    // { id: 3, title: "Дом из бруса" },
-    // { id: 4, title: "Баня" },
     {
       id: 4,
       title: "Коммерческая недвижимость",
       imageUrl: "/commerce.jpg",
     },
     { id: 5, title: "Другое", imageUrl: "/other.jpg" },
-    // { id: 6, title: "Другое" },
   ];
 
   return {
@@ -102,6 +97,18 @@ export default function Home({ exercises }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!name || !name.trim()) {
+      setName(false);
+    }
+    if (!email || !email.trim()) {
+      setEmail(false);
+    }
+    if (!message || !message.trim()) {
+      setMessage(false);
+    }
+
+    if (!name || !email || !message) return;
+
     console.log("Sending");
 
     let data = {
@@ -110,8 +117,8 @@ export default function Home({ exercises }) {
       message,
       allAnswers,
     };
-    
-   setSubmitted(true);
+
+    setSubmitted(true);
 
     fetch("/api/contact", {
       method: "POST",
@@ -122,12 +129,12 @@ export default function Home({ exercises }) {
       body: JSON.stringify(data),
     }).then((res) => {
       console.log("Response received");
-//       if (res.status === 200) {
-        console.log("Response succeeded!");
-        setName("");
-        setEmail("");
-        setMessage("");
-//       }
+      //       if (res.status === 200) {
+      console.log("Response succeeded!");
+      setName("");
+      setEmail("");
+      setMessage("");
+      //       }
     });
   };
 
@@ -159,10 +166,10 @@ export default function Home({ exercises }) {
     });
     setAllAnswers({
       ...allAnswers,
-      0: { question: 'Тип строения', answer: answer },
+      0: { question: "Тип строения", answer: answer },
     });
   };
-  
+
   const hideExercise = () => {
     setState(initialState);
   };
@@ -174,7 +181,7 @@ export default function Home({ exercises }) {
     });
   };
 
-    return (
+  return (
     <>
       <Head>
         <title>Quiz</title>
@@ -206,7 +213,13 @@ export default function Home({ exercises }) {
               <div className="flex flex-col">
                 <label htmlFor="name">Площать пильного фундамента в кв/м</label>
                 <input
-                  className="rounded-md  text-black bg-white p-2 border border-gray"
+                  className={cls(
+                    "rounded-md  text-black bg-white p-2 border border-gray",
+                    {
+                      "outline outline-2 outline-red-600 shadow-md shadow-red-600":
+                        name === false,
+                    }
+                  )}
                   onChange={(e) => {
                     setName(e.target.value);
                   }}
@@ -217,7 +230,13 @@ export default function Home({ exercises }) {
                 <label htmlFor="message">Телефон</label>
                 <input
                   type="tel"
-                  className="rounded-md text-black bg-white p-2 border border-gray"
+                  className={cls(
+                    "rounded-md text-black bg-white p-2 border border-gray",
+                    {
+                      "outline outline-2 outline-red-600 shadow-md shadow-red-600":
+                        message === false,
+                    }
+                  )}
                   onChange={(e) => {
                     setMessage(e.target.value);
                   }}
@@ -228,7 +247,13 @@ export default function Home({ exercises }) {
                 <label htmlFor="email">Почта</label>
                 <input
                   type="email"
-                  className="rounded-md text-black bg-white p-2 border border-gray"
+                  className={cls(
+                    "rounded-md text-black bg-white p-2 border border-gray",
+                    {
+                      "outline outline-2 outline-red-600 shadow-md shadow-red-600":
+                        email === false,
+                    }
+                  )}
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
