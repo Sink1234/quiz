@@ -8,9 +8,8 @@ export default function Answer(props) {
         onClick={() => answerQuestion(answerValue, answerText)}
       >
         <span className="mr-2">{icon}</span>
-        {`${answerValue}. ${answerText}`}
+        {answerText}
       </button>
     </li>
   );
 }
-
