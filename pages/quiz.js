@@ -7,6 +7,7 @@ import polygon from "../public/kirpich.jpg";
 import Image from "next/image";
 import { Input } from "postcss";
 import cls from "classnames";
+import InputMask from 'react-input-mask';
 
 export function getServerSideProps() {
   const exercises = [
@@ -103,7 +104,7 @@ export default function Home({ exercises }) {
     if (!email || !email.trim()) {
       setEmail(false);
     }
-    if (!message || !message.trim()) {
+    if (!message || !message.trim() || message.includes('  -  ')) {
       setMessage(false);
     }
 
@@ -228,7 +229,15 @@ export default function Home({ exercises }) {
               </div>
               <div className="flex flex-col">
                 <label htmlFor="message">Телефон</label>
-                <input
+                <InputMask mask="+7(999)-999-99-99" alwaysShowMask maskChar={' '} value={message} onChange={(e) => {
+                    setMessage(e.target.value)}} className={cls(
+                      "rounded-md text-black bg-white p-2 border border-gray",
+                      {
+                        "outline outline-2 outline-red-600 shadow-md shadow-red-600":
+                          message === false,
+                      }
+                    )} />
+                {/* <input
                   type="tel"
                   className={cls(
                     "rounded-md text-black bg-white p-2 border border-gray",
@@ -241,7 +250,7 @@ export default function Home({ exercises }) {
                     setMessage(e.target.value);
                   }}
                   name="message"
-                />
+                /> */}
               </div>
               <div className="flex flex-col">
                 <label htmlFor="email">Почта</label>
@@ -284,3 +293,4 @@ export default function Home({ exercises }) {
     </>
   );
 }
+
