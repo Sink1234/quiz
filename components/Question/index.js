@@ -80,7 +80,7 @@ export default function Question({
         шаг {`${state.currentQuestion + 2}`}/6
       </h5>
       <button
-        className="flex items-center gap-1 bg-black border boder-[c7c7c7] text-[#c7c7c7] p-2 px-4 my-2 w-fit rounded-sm shadow-md text-white"
+        className="flex items-center gap-1 border boder-[c7c7c7] text-[#c7c7c7] p-2 px-4 my-2 w-fit rounded-sm shadow-md text-white"
         onClick={hideExercise}
       >
         <span>
@@ -98,7 +98,7 @@ export default function Question({
       />
 
       <div className="mt-auto">
-        <div className="text-[12px] text-[#6D6D6D]">{percents}%</div>
+        <div className="text-[12px] text-[#ffffff]">{percents}%</div>
         <ProgressBar
           customLabel=" "
           bgColor="green"
