@@ -11,16 +11,16 @@ import InputMask from 'react-input-mask';
 
 export function getServerSideProps() {
   const exercises = [
-    { id: 0, title: "Дом из газобетона", imageUrl: "/beton.jpg" },
-    { id: 1, title: "Кирпичный дом", imageUrl: "/kirpich.jpg" },
-    { id: 2, title: "Деревянный дом", imageUrl: "/wood.jpg" },
-    { id: 3, title: "Мелкое строение", imageUrl: "/small.jpg" },
+    { id: 0, title: "Дом из газобетона", imageUrl: "/beton.jpeg" },
+    { id: 1, title: "Кирпичный дом", imageUrl: "/kirpich.jpeg" },
+    { id: 2, title: "Деревянный дом", imageUrl: "/wood.jpeg" },
+    { id: 3, title: "Мелкое строение", imageUrl: "/small.jpeg" },
     {
       id: 4,
       title: "Коммерческая недвижимость",
-      imageUrl: "/commerce.jpg",
+      imageUrl: "/commerce.jpeg",
     },
-    { id: 5, title: "Другое", imageUrl: "/other.jpg" },
+    { id: 5, title: "Другое", imageUrl: "/other.jpeg" },
   ];
 
   return {
