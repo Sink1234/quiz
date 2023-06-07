@@ -88,7 +88,7 @@ export default function Question({
         </span>
         <span>К выбору строения</span>
       </button>
-      <h1 className="text-md mt-2 text-[#6D6D6D] mb-10">{`${
+      <h1 className="text-md mt-2 text-[#ffffff] mb-10">{`${
         state.currentQuestion + 2
       }. ${question.question}`}</h1>
       <Answers
