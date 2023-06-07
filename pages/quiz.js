@@ -191,7 +191,7 @@ export default function Home({ exercises }) {
 
       <main
         className={cls(
-          " w-full flex bg-black text-white grow min-h-[100%] flex-col items-center justify-center pt-20 sm:pt-[40px] px-5 pb-20 ",
+          " w-full flex text-white grow min-h-[100%] flex-col items-center justify-center pt-20 sm:pt-[40px] px-5 pb-20 ",
           {
             "!items-start !justify-start ": isMobile,
           }
