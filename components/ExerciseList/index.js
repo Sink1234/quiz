@@ -14,7 +14,7 @@ export default function ExerciseList({ exercises, isMobile, func }) {
       >
         шаг 1
       </h5>
-      <p className="text-[#6D6D6D] text-[20px] mb-10 mt-1 font-medium">
+      <p className="text-[#fff] text-[20px] mb-10 mt-1 font-medium">
         Для какого строения требуется фундамент?
       </p>
 
@@ -37,7 +37,7 @@ export default function ExerciseList({ exercises, isMobile, func }) {
                     height={350}
                   />
 
-                  <div className="text-[#6D6D6D] text-[15px] text-center whitespace-normal mt-2">
+                  <div className="text-[#fff] text-[15px] text-center whitespace-normal mt-2">
                     {exercise.title}
                   </div>
                 </div>
@@ -71,7 +71,7 @@ export default function ExerciseList({ exercises, isMobile, func }) {
                 height={isMobile ? 110 : 135}
               />
 
-              <div className="text-[#6D6D6D] text-[15px] text-center whitespace-normal mt-2">
+              <div className="text-[#fff] text-[15px] text-center whitespace-normal mt-2">
                 {exercise.title}
               </div>
             </li>
