@@ -20,10 +20,8 @@ export default function ExerciseList({ exercises, isMobile, func }) {
 
       {isMobile ? (
         <Swiper
-          modules={[Virtual, Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={10}
           slidesPerView={1.2}
-          virtual
         >
           {exercises.map((exercise, index) => {
             return (
